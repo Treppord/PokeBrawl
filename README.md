@@ -25,6 +25,30 @@ The Windows build is on the [Releases](https://github.com/xjoje6/PokeBrawl/relea
 it and run `PokeBrawl.exe`. It carries the music; the repository does not (see
 [Credits](#credits-and-licenses)).
 
+## Build and run on macOS
+
+Install the standard [Godot 4.7.2](https://godotengine.org/download) editor and its matching
+export templates. From Terminal, in the repository folder:
+
+```bash
+./play.sh
+```
+
+To export a macOS app bundle:
+
+```bash
+./build-macos.sh
+```
+
+The app is written to `export/PokeBrawl/PokeBrawl.app`. Godot's official macOS export template
+creates a Universal 2 app for Apple Silicon and Intel Macs. You can also open `game/project.godot`
+in Godot and run or export the project from the editor. If Godot is not on your `PATH`, set
+`GODOT` to the editor executable before running either script, for example:
+
+```bash
+GODOT="/Applications/Godot.app/Contents/MacOS/Godot" ./play.sh
+```
+
 ## Play from the source
 
 You need [Godot 4.7.2](https://godotengine.org/download) (the standard build, not .NET).
@@ -35,8 +59,8 @@ godot --path PokeBrawl/game
 ```
 
 On Windows, `play.bat` does the same if Godot is on your `PATH` or in the `GODOT` environment
-variable. `training.bat` opens the menu with training mode already picked. From the source
-the game runs without music unless you add the files listed in
+variable. `training.bat` opens the menu with training mode already picked; on macOS, use
+`./training.sh`. From the source the game runs without music unless you add the files listed in
 [game/music/README.md](game/music/README.md).
 
 Arguments skip the menu and go straight into a battle:
