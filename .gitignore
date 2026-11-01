@@ -11,6 +11,9 @@
 # Python
 __pycache__/
 
+# macOS Finder metadata
+.DS_Store
+
 # Music: arrangements by The Noble Demon, used with credit but never reuploaded on their
 # own. Each copy of the project gets the files locally (see game/music/README.md); the
 # released build carries them inside its .pck only.
