@@ -27,8 +27,9 @@ it and run `PokeBrawl.exe`. It carries the music; the repository does not (see
 
 ## Build and run on macOS
 
-Install the standard [Godot 4.7.2](https://godotengine.org/download) editor and its matching
-export templates. From Terminal, in the repository folder, run the game with:
+Install the standard [Godot 4.7.2](https://godotengine.org/download) editor. In Godot, open
+**Editor → Manage Export Templates** and install the matching templates. From Terminal, in the
+repository folder, run the game with:
 
 ```bash
 make run
