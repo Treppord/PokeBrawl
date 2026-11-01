@@ -28,25 +28,27 @@ it and run `PokeBrawl.exe`. It carries the music; the repository does not (see
 ## Build and run on macOS
 
 Install the standard [Godot 4.7.2](https://godotengine.org/download) editor and its matching
-export templates. From Terminal, in the repository folder:
+export templates. From Terminal, in the repository folder, run the game with:
 
 ```bash
-./play.sh
+make run
 ```
 
-To export a macOS app bundle:
+To start in training mode, use `make training`. To export a macOS app bundle:
 
 ```bash
-./build-macos.sh
+make build
 ```
 
 The app is written to `export/PokeBrawl/PokeBrawl.app`. Godot's official macOS export template
 creates a Universal 2 app for Apple Silicon and Intel Macs. You can also open `game/project.godot`
-in Godot and run or export the project from the editor. If Godot is not on your `PATH`, set
-`GODOT` to the editor executable before running either script, for example:
+in Godot and run or export the project from the editor. Use `make help` to see the available
+targets. To pass game arguments, set `ARGS`; if Godot is not on your `PATH`, set `GODOT` to its
+executable:
 
 ```bash
-GODOT="/Applications/Godot.app/Contents/MacOS/Godot" ./play.sh
+make run ARGS="--lang=en"
+make run GODOT="/Applications/Godot.app/Contents/MacOS/Godot"
 ```
 
 ## Play from the source
